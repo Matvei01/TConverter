@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad7_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TConverter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="744" height="1133"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="day" translatesAutoresizingMaskIntoConstraints="NO" id="XBi-Qv-hRx">
+                                <rect key="frame" x="0.0" y="-32" width="744" height="1194"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0ºC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-Ht-Aat">
+                                <rect key="frame" x="343" y="501.5" width="58" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32ºF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r14-UP-HQZ">
+                                <rect key="frame" x="336" y="593.5" width="72" height="42"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NbG-OD-8Ou">
+                                <rect key="frame" x="228.5" y="553.5" width="287" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="283" id="JeL-Wv-uVW"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="q7I-Vk-2IG"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T-Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UFU-Bb-v1P">
+                                <rect key="frame" x="182" y="192" width="380.5" height="69.5"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="55"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="XBi-Qv-hRx" secondAttribute="top" constant="56" id="2ZD-ZE-Br3"/>
+                            <constraint firstItem="UFU-Bb-v1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="58" id="44L-Ol-VRA"/>
+                            <constraint firstItem="UFU-Bb-v1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="168" id="6I3-Mq-cbK"/>
+                            <constraint firstItem="UFU-Bb-v1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CGq-39-HlB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UFU-Bb-v1P" secondAttribute="trailing" constant="16" id="NjB-da-SjZ"/>
+                            <constraint firstItem="XBi-Qv-hRx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="49" id="PHt-UB-9Ko"/>
+                            <constraint firstItem="uRp-Ht-Aat" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uex-At-fAu"/>
+                            <constraint firstItem="r14-UP-HQZ" firstAttribute="top" secondItem="NbG-OD-8Ou" secondAttribute="bottom" constant="10" id="Xab-CE-c9w"/>
+                            <constraint firstItem="r14-UP-HQZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bQ9-pF-k7k"/>
+                            <constraint firstItem="XBi-Qv-hRx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="blZ-OW-XxL">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-50"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="-50"/>
+                            </constraint>
+                            <constraint firstItem="NbG-OD-8Ou" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cCu-Kb-XbT"/>
+                            <constraint firstItem="UFU-Bb-v1P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eIK-P1-uVv"/>
+                            <constraint firstItem="NbG-OD-8Ou" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="fN3-5C-xYI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XBi-Qv-hRx" secondAttribute="trailing" id="hes-dV-TeI">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-50"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="-50"/>
+                            </constraint>
+                            <constraint firstItem="NbG-OD-8Ou" firstAttribute="top" secondItem="uRp-Ht-Aat" secondAttribute="bottom" constant="10" id="ogl-vX-yfA"/>
+                            <constraint firstItem="UFU-Bb-v1P" firstAttribute="leading" relation="lessThanOrEqual" secondItem="uRp-Ht-Aat" secondAttribute="trailing" constant="117" id="pM6-el-HV0"/>
+                            <constraint firstItem="UFU-Bb-v1P" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rxe-L1-eoP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NjB-da-SjZ"/>
+                                <exclude reference="44L-Ol-VRA"/>
+                                <exclude reference="6I3-Mq-cbK"/>
+                                <exclude reference="CGq-39-HlB"/>
+                                <exclude reference="eIK-P1-uVv"/>
+                                <exclude reference="pM6-el-HV0"/>
+                                <exclude reference="rxe-L1-eoP"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="NjB-da-SjZ"/>
+                                <include reference="CGq-39-HlB"/>
+                                <include reference="pM6-el-HV0"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="NjB-da-SjZ"/>
+                                <include reference="CGq-39-HlB"/>
+                                <include reference="pM6-el-HV0"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="44L-Ol-VRA"/>
+                                <include reference="eIK-P1-uVv"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="6I3-Mq-cbK"/>
+                                <include reference="rxe-L1-eoP"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="uRp-Ht-Aat" id="Ib7-D2-4Pu"/>
+                        <outlet property="fahrenheitLabel" destination="r14-UP-HQZ" id="2jZ-bd-k6i"/>
+                        <outlet property="slider" destination="NbG-OD-8Ou" id="eYt-he-ZYi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="26.086956521739133" y="64.955357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="day" width="375" height="667"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
